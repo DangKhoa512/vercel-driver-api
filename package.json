@@ -1,0 +1,7 @@
+{
+  "name": "vercel-drive-api",
+  "dependencies": {
+    "googleapis": "^131.0.0",
+    "formidable": "^3.5.1"
+  }
+}
