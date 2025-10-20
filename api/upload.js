@@ -18,7 +18,7 @@ export default async function handler(req, res) {
 
     try {
       const auth = new google.auth.GoogleAuth({
-        credentials: JSON.parse(fs.readFileSync("./service_account.json")),
+        credentials: JSON.parse(process.env.SERVICE_ACCOUNT_JSON),
         scopes: ["https://www.googleapis.com/auth/drive.file"],
       });
       const drive = google.drive({ version: "v3", auth });
@@ -51,3 +51,4 @@ export default async function handler(req, res) {
     }
   });
 }
+
